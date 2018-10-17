@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Estatisticas</title>
+</head>
+<body>
+    
+<h1>{{ categoria.nome }}</h1>
+<h3>Porcentagem de noticias: {{ porcentagem }}%</h3>
+<ul>
+    {% for noticia in noticias %}
+    <li><a href="/noticia/{{ noticia.pk }}/detalhes/">{{ noticia.titulo }}</a></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Estatisticas</title>
+</head>
+<body>
+
+<h1>Estatísticas</h1>
+
+<table border="1" width="100%">
+    <thead>
+        <th>Quantiade de autores</th>
+        <th>Autor com mais notícias</th>
+        <th>Quantidade notícias</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ qtd_autores }}</td>
+            <td>{{ nome_autor }}</td>
+            <td>{{ qtd_noticias_autor }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Catégorias</h3>
+<table border="1">
+    <thead>
+        <th>Nome</th>
+        <th>Porcentagem</th>
+    </thead>
+    <tbody>
+        {% for categoria in categorias %}
+        <tr>
+            <td>{{ categoria.nome }}</td>
+            <td>{{ categoria.porcentagem }}%</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

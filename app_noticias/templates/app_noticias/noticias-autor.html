@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Estatisticas</title>
+</head>
+<body>
+    
+<ul>
+    {% for noticia in noticias %}
+    <li><a href="/noticia/{{ noticia.pk }}/detalhes/">{{ noticia.titulo }}</a></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
